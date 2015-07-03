@@ -1,12 +1,9 @@
 body {
+  height: 100%;
   padding-top: 20px;
-  padding-bottom: 20px;
-  background: -webkit-linear-gradient(#d1dcf1, #FFFFFF); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#d1dcf1, #FFFFFF); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#d1dcf1, #FFFFFF); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#d1dcf1, #FFFFFF); /* Standard syntax */
+  background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
-  background-size: 150% 200%;
+  background-size: cover;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -29,22 +26,45 @@ body {
   color: #000;
 }
 
+.text-bottom {
+  vertical-align: bottom;
+}
+
 /* Navbar */
 
-.navbar {
-  margin-bottom: 20px;
-  border: 0;
-  background-color: transparent;
+.navbar, .navbar-nav > li > .dropdown-menu {
+  font-family: 'Roboto Slab', serif;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: -webkit-linear-gradient(#F0FFF0, #F5FFFA); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F0FFF0, #F5FFFA); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F0FFF0, #F5FFFA); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F0FFF0, #F5FFFA); /* Standard syntax (must be last) */
 }
 
-.navbar-default .navbar-toggle {
-  border-color: #000;
-}
-
-.navbar-default .navbar-nav > a, .navbar-default .navbar-nav > a:hover, .navbar-default .navbar-nav > a:focus,
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > a, .navbar-default .navbar-nav > a:focus, .navbar-default .navbar-nav > a:hover, .navbar-default .navbar-nav > a:focus,
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
   background: transparent;
+}
+
+.navbar-nav > li > .dropdown-menu > li > a {
+  color: #555;
+}
+
+.navbar-nav > li > .dropdown-menu > li > a:hover {
+  background: transparent;
+  color: #000;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  font-weight: bold;
+}
+
+.shadow-custom {
+  box-shadow: 3px 3px 5px #888888;
 }
 
 @media (min-width: 768px) {
@@ -61,29 +81,40 @@ body {
   }
 }
 
-.navbar-default .navbar-nav > .active {
-  border-bottom: solid 2px #000;
-}
-
 /* List */
+
+.sidebar {
+  font-family: 'Roboto Slab', serif;
+  color: #555;
+}
 
 .no-style {
   list-style: none;
   padding: 0;
 }
 
-button.list-group-item-custom:focus {
-    background-color: rgba(255,255,255,1);
-    border-bottom: 0;
+.sidebar-style {
+  list-style: none;
+  padding: 40px 0 40px 0;
 }
 
-button.list-group-item-custom:hover {
-    background-color: rgba(245,245,245,1);
+.sidebar-style a:hover {
+  color: #000;
+  text-decoration: none;
 }
 
-.well-custom {
-  border-top: 0;
-  margin-bottom: 0;
+.sidebar-style li {
+  border-bottom: solid 2px #936A4A;
+  margin-bottom: 10px;
+}
+
+.sidebar-style-child {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.span-size-sm {
+  font-size: 12px;
 }
 
 /* Text Align */
@@ -100,6 +131,10 @@ button.list-group-item-custom:hover {
   text-align: center;
 }
 
+/* Container */
+
+.container {}
+
 /* Content */
 
 #content {
@@ -107,6 +142,7 @@ button.list-group-item-custom:hover {
 }
 
 .title-section {
+  color: #936A4A;
   margin-bottom: 15px;
 }
 
@@ -115,10 +151,24 @@ button.list-group-item-custom:hover {
   margin-top: 0;
 }
 
+.news-column {
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-family: "Times New Roman";
+}
+
 .date-content, .title-content {
   display:inline;
   font-size: 12px;
   font-weight: bold;
+}
+
+.date-content {
+  color: #CC3300
+}
+
+.title-content {
+  font-size: 13px;
 }
 
 .date-content:after {
@@ -140,16 +190,15 @@ button.list-group-item-custom:hover {
   width: 25%;
 }
 
-.news-column {
-  font-size: 11px;
-  margin-bottom: 10px;
-}
-
 /* Footer */
 
 .footer-custom {
-  border-top: solid 2px #000;
-  font-size: 11px;
+  border-top: 2px solid;
+  width:100%;
+  height:20px;
+  position:absolute;
+  bottom:0;
+  left:0;
 }
 
 .footer-title {
@@ -175,4 +224,28 @@ button.list-group-item-custom:hover {
 
 .float-clear {
   clear: both;
+}
+
+/* Panel Body */
+
+.panel-custom-content {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: -webkit-linear-gradient(#F5FFFA, #FFF5EE); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F5FFFA, #FFF5EE); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F5FFFA, #FFF5EE); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F5FFFA, #FFF5EE); /* Standard syntax (must be last) */
+}
+
+.panel-custom-footer {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: -webkit-linear-gradient(#FFF5EE, #F5F5DC); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FFF5EE, #F5F5DC); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FFF5EE, #F5F5DC); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FFF5EE, #F5F5DC); /* Standard syntax (must be last) */
 }
