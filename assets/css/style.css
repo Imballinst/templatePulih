@@ -8,14 +8,6 @@ body {
 
 /* Header */
 
-#header {
-  background-image: url("../img/header.jpg");
-  background-repeat: no-repeat;
-  border-radius: 50px;
-  border: solid 1px #000;
-  opacity: 0.8;
-}
-
 #header-logo {
   width: 175px;
   height: 175px;
@@ -26,14 +18,16 @@ body {
 }
 
 #header-text {
-  font-size: 55px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
   padding: 45px 15px 45px 15px;
   text-align: center;
 }
 
 #header-motto {
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  padding: 58px 15px 58px 15px;
+  padding: 57px 0 57px 0;
   text-align: center;
 }
 
@@ -85,6 +79,14 @@ body {
 
 /* Text Align */
 
+.text-align-left {
+  float: left;
+}
+
+.text-align-center {
+  float: center;
+}
+
 .text-align-right {
   float: right;
 }
@@ -99,15 +101,21 @@ body {
 
 /* List */
 
-.no-style {
+ul.no-style {
   list-style: none;
   padding: 0;
+}
+
+ul.second-li {
+  padding-left: 17px;
 }
 
 /* Carousel */
 
 .carousel-inner > .item > img {
     margin: 0 auto;
+    width: 1200px;
+    height: 350px;
 }
 
 .carousel-caption {
@@ -117,6 +125,16 @@ body {
 
 .carousel-caption > a {
   color: #cffcff;
+}
+
+.title-and-date-caption {
+  display: inline;
+  font-weight: bold;
+}
+
+.title-and-date-caption:after {
+  content: '\a';
+  white-space: pre;
 }
 
 /* Container */
@@ -139,6 +157,47 @@ body {
 
 .badge.badge-custom {
   float:right;
+}
+
+/* Calendar Box Event */
+
+.main-box {
+  border: solid 1px #000;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.date-box-month {
+  border-bottom: solid 1px #000;
+  background-color: #294052;
+  color: #FFF;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.date-box-day {
+  font-size: 30px;
+  padding-top: 9px;
+  color: #7F5417;
+}
+
+.date-box-month, .date-box-day {
+  text-align: center;
+}
+
+.date-box-day, .date-box-month, .event-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.event-title:after {
+  content: '\a\a';
+  white-space: pre;
+}
+
+.event-description {
+  font-size: 11px;
 }
 
 /* Footer */
@@ -180,11 +239,33 @@ body {
 /* Panel Body */
 
 .panel-default > .panel-heading {
-  background-color: transparent;
+  background-color: #097054;
+  color: #FFF;
+}
+
+.sidebar-custom .panel-default > .panel-heading {
+  background-color: #593E1A;
+  color: #FFF;
 }
 
 .panel-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
   text-align: center;
+}
+
+.sidebar-custom {
+  font-family: 'Roboto Slab', serif;
+  height: 928px;
+}
+
+.data-pulih {
+  height: 416px;
+}
+
+.kontak-pulih {
+  height: 338px;
 }
 
 .panel-custom-content {
